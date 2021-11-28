@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GUI Touchscreen</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="gui.css">
+		<!--js: function to get clock to update--><script>	 
+			function startTime() {
+			  var today = new Date();
+			  var h = today.getHours();
+			  var m = today.getMinutes();
+			  var session = "AM";
+			    
+			    if(h == 0){
+			        h = 12;
+			    }
+			    
+			    if(h > 12){
+			        h = h - 12;
+			        session = "PM";
+			    }
+			  m = checkTime(m);
+
+			  document.getElementById('txt').innerHTML =
+			  h + ":" + m + " " + session;
+			  var t = setTimeout(startTime, 1000);
+			}
+			function checkTime(i) {
+			  if (i < 10) {i = "0" + i};  
+			  return i;
+			}
+		</script>
+	</head>
+	<style>
+		.mph > div{
+			background:#eee;
+			padding:1em;
+		}
+	</style>
+	<body onload="startTime()">	<!--call startTime function-->	
+		<div class="grid">
+			<div class="time">
+				<div id="txt"></div>	<!--replace hardcoded value-->
+			</div>
+			<div class="speed">
+				<p>12</p>
+			</div>
+			<div class="MPH">
+				<p>MPH</p>
+			</div>
+			<div class="distance_travelled">
+				<p>10 mi</p>
+			</div>
+		</div>
+
+		<div class="pop_up">
+			<div class="Home">
+				<p>Home</p>
+			</div>
+			<div class="Map">
+				<p>Map</p>
+			</div>
+			<div class="Camera">
+				<p>Camera</p>
+			</div>
+		</div>
+
+		<div class="light_bulb">
+			<p></p>
+		</div>
+
+	</body>
+</html>
+
+
+
