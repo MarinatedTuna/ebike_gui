@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*this sets the rows, columns, and font*/
+.Font {
+	display: grid;
+	background-color: #777272;
+	color: white;
+	grid-template-rows: 250px 0.7fr;
+	grid-template-areas:
+	"Music. "
+	"Challenges. "
+	"Settings. ";
+	font-family: Verdana, Times New Roman; 
+	font-size: 24px;
+}
+
+/*Below are text for buttons with appropriate spacing for Music, Challenges, and Settings*/
+.Music {
+	margin-top: 0em;
+	display: block;
+}
+
+.Challenges {
+	margin-top: 2em;
+	display: block;
+}
+
+.Settings {
+	margin-top: 2em;
+	display: block;
+}
+
+._ {
+	margin-top: 2em;
+	display: block;
+}
